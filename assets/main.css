@@ -59,12 +59,6 @@ main {
 	/* Default value of `display` of `main` element is 'inline' in IE 11. */
 }
 
-/** Images */
-img {
-	max-width: 100%;
-	vertical-align: middle;
-}
-
 /** Figures */
 figure>img {
 	display: block;
@@ -739,4 +733,6 @@ img {
 	width: 400px !important;
 	height: 300px !important;
 	object-fit: cover !important;
+	max-width: 100%;
+	vertical-align: middle;
 }
