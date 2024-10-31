@@ -19,12 +19,17 @@ description: My blog!
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://stefandecimelli.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  stefandecimelli
+linkedin_username: stefandecimelli
 
 # Build settings
 markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+header_pages:
+  - about.md
+minima:
+  skin: dark
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
