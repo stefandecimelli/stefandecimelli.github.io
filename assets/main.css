@@ -736,3 +736,7 @@ img {
 	max-width: 100%;
 	vertical-align: middle;
 }
+
+footer {
+	background-color: #e6ebee !important;
+}
