@@ -730,8 +730,8 @@ table td {
 }
 
 img {
-	width: 400px !important;
-	height: 300px !important;
+	width: 360px !important;
+	height: 220px !important;
 	object-fit: cover !important;
 	max-width: 100%;
 	vertical-align: middle;
