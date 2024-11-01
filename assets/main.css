@@ -750,3 +750,12 @@ img {
 footer {
 	background-color: #e6ebee !important;
 }
+
+@font-face {
+    font-family: "RoleModelPersonalUseRegular";
+    src: url("/assets/RoleModelPersonalUseRegular-8MooA.otf");
+}
+
+h1 {
+	font-family: "RoleModelPersonalUseRegular";
+}
