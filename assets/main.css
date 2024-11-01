@@ -737,6 +737,16 @@ img {
 	vertical-align: middle;
 }
 
+@media only screen and (max-device-width: 755px) {
+	img {
+		width: 44vw !important;
+		height: 220px !important;
+		object-fit: cover !important;
+		max-width: 100%;
+		vertical-align: middle;
+	}
+}
+
 footer {
 	background-color: #e6ebee !important;
 }
