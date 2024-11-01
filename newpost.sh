@@ -50,7 +50,7 @@ title: All $tag Posts in ${month_name} ${year}
 ---"
 
 create_file_if_not_exists "_posts/${year}/${month_short}/${year}-${month_num}-${day}-index.md" "---
-layout: post
+layout: signoff_post
 title:  \"Title\"
 date:   ${year}-${month_num}-${day}
 categories: $tag

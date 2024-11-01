@@ -752,10 +752,10 @@ footer {
 }
 
 @font-face {
-    font-family: "RoleModelPersonalUseRegular";
-    src: url("/assets/RoleModelPersonalUseRegular-8MooA.otf");
+    font-family: "QueenSmoothie";
+    src: url("/assets/QueenSmoothie-mL58G.ttf");
 }
 
 h1 {
-	font-family: "RoleModelPersonalUseRegular";
+	font-family: "QueenSmoothie";
 }
