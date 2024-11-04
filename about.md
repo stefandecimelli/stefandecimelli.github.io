@@ -12,9 +12,8 @@ Here is a list of things I like:
 - Java
 - Pasta
 
-<p>Posts about me</p>
+Posts about me:
 <ul>
-  {% assign path = page.url %}
   {% for post in site.posts %}
     {% if post.url contains "meta" %}
       <li>[{{ post.date | date: "%Y-%m-%d" }}] <a href="{{ post.url }}">{{ post.title }}</a></li>
