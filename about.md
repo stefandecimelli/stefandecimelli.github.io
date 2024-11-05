@@ -7,7 +7,7 @@ permalink: /about/
 I am blogging now, watch out! 
 Time to make every thought I have available on the internet for everyone to see, because they're taking up too much space in the dome.
 
-Here's a list of things I like:
+I love making lists, so here's a general list of things I like:
 - Sci-Fi and Fantasy 
   - especially:
     - Dune
