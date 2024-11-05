@@ -4,15 +4,24 @@ title: About
 permalink: /about/
 ---
 
-I am a Software Developer looking for something to do. So now I am blogging.
+I am blogging now, watch out! 
+Time to make every thought I have available on the internet for everyone to see, because they're taking up too much space in the dome.
 
-Here is a list of things I like:
-- Fantasy books
-- Toronto Maple Leafs
-- Java
+Here's a list of things I like:
+- Sci-Fi and Fantasy 
+  - especially:
+    - Dune
+    - Game of Thrones
+    - Lord of the Rings
+    - Harry Potter
+- Modern classic books
+- History and classics
+- Hockey
+  - I'm a Leafs fan, try not to cry about it!
+- Java code
 - Pasta
 
-Posts about me:
+And some posts about me:
 <ul>
   {% for post in site.posts %}
     {% if post.url contains "meta" %}
