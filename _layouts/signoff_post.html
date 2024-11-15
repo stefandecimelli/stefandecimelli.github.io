@@ -6,3 +6,13 @@ layout: post
 
 That's it for now,
 <br/><h1>- Stefan</h1>
+<br />
+<div class="postNav">
+	{% if page.previous and page.previous.id != page.id %}
+	<div style="display: inline-block;"><a href={{ page.previous.id }}>Previous post</a></div>
+	{% endif %}
+	{% if page.next and page.next.id != page.id %}
+	<div style="display: inline-block;"><a href={{ page.next.id }}>Next post</a></div>
+	{% endif %}
+</div>
+<br />
