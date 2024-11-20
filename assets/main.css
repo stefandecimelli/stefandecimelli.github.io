@@ -752,12 +752,12 @@ footer {
 }
 
 @font-face {
-    font-family: "QueenSmoothie";
-    src: url("/assets/QueenSmoothie-mL58G.ttf");
+    font-family: "LemonBrushPersonalUseOnly";
+    src: url("/assets/LemonBrushPersonalUseOnly-Texture.otf");
 }
 
 h1 {
-	font-family: "QueenSmoothie";
+	font-family: "LemonBrushPersonalUseOnly";
 }
 
 .postNav {

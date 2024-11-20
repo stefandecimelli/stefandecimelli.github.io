@@ -8,7 +8,7 @@ I’ve always believed that writing is one of the best ways to sharpen your thin
 Most recent posts:
 {% for post in site.posts limit:10 %}
 <p style="color:#828282;margin-bottom:0">{{ post.date | date: "%Y-%m-%d" }} <a href="{{ post.url }}">
-	<h2>{{ post.title }}</h2>
+	<h3>{{ post.title }}</h3>
 </a></p>
 {% endfor %}
 
