@@ -11,3 +11,4 @@ plugins:
   - jekyll-feed
 header_pages:
   - about.md
+page_break: "<div style=\"margin:0;display:flex;justify-content:center;align-items:center;margin-bottom:1rem\"><div>● ● ●</div></div>"
