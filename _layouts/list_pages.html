@@ -3,9 +3,11 @@ layout: default
 ---
 
 <h1>Posts</h1>
-{% assign path = page.url | split: '/' | last %}
+{% assign path = page.url %}
 <ul>
-  {% for post in site.categories[path] %}
-  <li>[{{ post.date | date: "%Y-%m-%d" }}] <a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% for post in site.posts %}
+    {% if post.url contains path %}
+      <li>[{{ post.date | date: "%Y-%m-%d" }}] <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endif %}
   {% endfor %}
 </ul>
