@@ -14,12 +14,12 @@ I love making lists, so here's a general list of things I like:
     - Game of Thrones
     - Lord of the Rings
     - Harry Potter
-- Modern classic books
 - History and classics
+- Video games
 - Hockey
   - I'm a Leafs fan, try not to cry about it!
-- Java code
-- Pasta
+- Programming
+- Cooking and grilling
 
 And some posts about me:
 <ul>
