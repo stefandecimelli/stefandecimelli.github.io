@@ -2,7 +2,34 @@
 layout: default
 ---
 
-<h1>Posts</h1>
+{% assign url_parts = page.url | split: '/' %}
+{% assign url_parts = url_parts | reject: '' %}
+{% assign last_part = url_parts | last %}
+{% assign last_part_length = last_part | size %}
+{% assign second_last_part = url_parts | slice: -2, 1 %}
+
+{% assign is_year = false %}
+{% if last_part_length == 4 %}
+  {% if last_part >= '1000' and last_part <= '9999' %}
+    {% assign is_year = true %}
+  {% endif %}
+{% endif %}
+
+{% unless is_year %}
+  Filter by year:
+  {% assign current_year = site.time | date: "%Y" | plus: 0 %}
+  {% for year in (2024..current_year) %}
+    <a href="{{ page.url }}/{{ year }}">{{ year }}</a>
+  {% endfor %}
+  <br/>
+  <br/>
+{% endunless %}
+
+{% if is_year %}
+  <p>All {{ second_last_part }} posts in {{ last_part }}:</p>
+{% else %}
+  <p>All {{ last_part }} posts:</p>
+{% endif %}
 {% assign path = page.url %}
 <ul>
   {% for post in site.posts %}
