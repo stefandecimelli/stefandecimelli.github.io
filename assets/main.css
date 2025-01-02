@@ -737,6 +737,12 @@ img {
 	vertical-align: middle;
 }
 
+.book-review img {
+	width: unset !important;
+	height: unset !important;
+	object-fit: unset !important;
+}
+
 @media only screen and (max-device-width: 755px) {
 	img {
 		width: 44vw !important;
