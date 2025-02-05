@@ -12,6 +12,6 @@ All posts:
 <i style="color:#999">Total word count: {{ total_words }}</i>
 <ul>
   {% for post in site.posts %}
-  <li>[{{ post.date | date: "%Y-%m-%d" }}] [{{ post.categories }}] <a href="{{ post.url }}">{{ post.title }}</a></li>
+  <li>[{{ post.date | date: "%Y-%m-%d" }}] <a href="{{ post.url }}">{{ post.title }}</a> <span style="color:#999">({{ post.categories }})</span></li>
   {% endfor %}
 </ul>
