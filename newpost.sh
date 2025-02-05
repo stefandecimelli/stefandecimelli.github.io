@@ -56,3 +56,13 @@ date:   ${year}-${month_num}-${day}
 categories: $tag
 ---
 "
+
+create_file_if_not_exists "./all/index.html" "---
+layout: list_pages
+title: All Posts
+---"
+
+create_file_if_not_exists "./all/${year}/index.html" "---
+layout: list_pages
+title: All Posts in ${year}
+---"

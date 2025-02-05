@@ -6,6 +6,7 @@ github_username:  stefandecimelli
 linkedin_username: stefandecimelli
 markdown: kramdown
 theme: minima
+permalink: pretty
 plugins:
   - jekyll-feed
 header_pages:
