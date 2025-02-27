@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
-rm -rf .jekyll-cache
-./bin/bundle exec jekyll serve --baseurl="" --trace
+./bin/bundle exec jekyll clean
+./bin/bundle exec jekyll build
+./bin/bundle exec jekyll serve --baseurl=""
