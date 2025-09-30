@@ -10,7 +10,11 @@ I’ve always believed that writing is one of the best ways to sharpen your thin
 Most recent posts:
 {% for post in site.posts limit:5 %}
 <p style="color:#828282;margin-bottom:0">{{ post.date | date: "%Y-%m-%d" }} <a href="{{ post.url }}">
-	<h3>{{ post.title }}</h3>
+	<h3>{{ post.title }} 
+	{% if post.author_url %}
+		by {{ post.author }}
+	{% endif %}
+	</h3>
 </a></p>
 {% endfor %}
 

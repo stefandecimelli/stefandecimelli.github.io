@@ -1,0 +1,39 @@
+---
+layout: post
+---
+
+<div class="book-review">
+	<time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+		{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+		{{ page.date | date: date_format }}
+	</time>
+	<a href="{{ page.book_url }}"
+		style="float: left; padding-right: 20px; width: unset !important; height: unset !important" target="_blank">
+		<img border="0" alt="Ship of Magic (Liveship Traders, #1)" src="{{ page.cover_url }}" />
+	</a>
+	<h1><a target="_blank" href="{{ page.book_url }}">{{ page.title }}</a></h1>
+	by
+	<a target="_blank" href="{{ page.author_url }}">{{ page.author }}</a>
+	<hr />
+	<br />
+	<i>{{ page.synopsis }}</i>
+	<br />
+	<br />
+</div>
+
+{{ content }}
+
+<i style="color:#999;float:right">Word count: {{ content | number_of_words }}</i>
+<p>That's it for now,</p>
+<i>- Stefan</i>
+<br />
+<br />
+<div class="postNav">
+	{% if page.previous and page.previous.id != page.id %}
+	<div style="display: inline-block;"><a href={{ page.previous.id }}>Previous post</a></div>
+	{% endif %}
+	{% if page.next and page.next.id != page.id %}
+	<div style="display: inline-block;"><a href={{ page.next.id }}>Next post</a></div>
+	{% endif %}
+</div>
+<br />

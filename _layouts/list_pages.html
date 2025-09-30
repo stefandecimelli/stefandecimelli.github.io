@@ -10,45 +10,41 @@ layout: default
 
 {% assign is_year = false %}
 {% if last_part_length == 4 %}
-{% if last_part >= '1000' and last_part <= '9999' %}
-{% assign is_year = true %}
-{% endif %}
-{% endif %}
+{% if last_part >= '1000' and last_part <= '9999' %} {% assign is_year=true %} {% endif %} {% endif %} {% unless is_year
+	%} Filter by year: {% assign current_year=site.time | date: "%Y" | plus: 0 %} {% for year in (2024..current_year) %}
+	<a href="{{ page.url }}/{{ year }}">{{ year }}</a>
+	{% endfor %}
+	<br />
+	<br />
+	{% endunless %}
 
-{% unless is_year %}
-Filter by year:
-{% assign current_year = site.time | date: "%Y" | plus: 0 %}
-{% for year in (2024..current_year) %}
-<a href="{{ page.url }}/{{ year }}">{{ year }}</a>
-{% endfor %}
-<br/>
-<br/>
-{% endunless %}
+	{% if last_part contains "all" %}
+	{% assign path = "" %}
+	All posts:
+	{% elsif second_last_part contains "all" %}
+	{% assign path = last_part %}
+	All posts in {{ last_part }}:
+	{% else %}
+	{% assign path = page.url %}
+	All {{ second_last_part }} posts in {{ last_part }}:
+	{% endif %}
 
-{% if last_part contains "all" %}
-{% assign path = "" %}
-All posts:
-{% elsif second_last_part contains "all" %}
-{% assign path = last_part %}
-All posts in {{ last_part }}:
-{% else %}
-{% assign path = page.url %}
-All {{ second_last_part }} posts in {{ last_part }}:
-{% endif %}
+	{% for post in site.posts %}
+	{% if post.url contains path %}
+	{% assign post_word_count = post.content | number_of_words %}
+	{% assign total_words = total_words | plus: post_word_count %}
+	{% endif %}
+	{% endfor %}
+	<span style="color:#999;font-style:italic;">Total word count: {{ total_words }}</span>
+	<div style="margin-bottom:0.5rem;"></div>
 
-{% for post in site.posts %}
-{% if post.url contains path %}
-{% assign post_word_count = post.content | number_of_words %}
-{% assign total_words = total_words | plus: post_word_count %}
-{% endif %}
-{% endfor %}
-<span style="color:#999;font-style:italic;">Total word count: {{ total_words }}</span>
-<div style="margin-bottom:0.5rem;"></div>
-
-<ul>
-{% for post in site.posts %}
-{% if post.url contains path %}
-<li>[{{ post.date | date: "%Y-%m-%d" }}] <a href="{{ post.url }}">{{ post.title }}</a></li>
-{% endif %}
-{% endfor %}
-</ul>
+	<ul>
+		{% for post in site.posts %}
+		{% if post.url contains path %}
+		<li>[{{ post.date | date: "%Y-%m-%d" }}] <a href="{{ post.url }}">{{ post.title }}
+				{% if post.author_url %}
+				by {{ post.author }}
+				{% endif %}</a></li>
+		{% endif %}
+		{% endfor %}
+	</ul>
