@@ -2,6 +2,7 @@ title: Stefan
 email: stefandecimelli@gmail.com
 baseurl: "/" 
 url: "https://stefandecimelli.github.io/"
+repository: stefandecimelli/stefandecimelli.github.io
 github_username:  stefandecimelli
 linkedin_username: stefandecimelli
 markdown: kramdown
