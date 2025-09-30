@@ -59,10 +59,10 @@ categories: $tag
 
 create_file_if_not_exists "./all/index.html" "---
 layout: list_pages
-title: All Posts
+title: All posts
 ---"
 
 create_file_if_not_exists "./all/${year}/index.html" "---
 layout: list_pages
-title: All Posts in ${year}
+title: All posts in ${year}
 ---"

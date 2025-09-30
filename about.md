@@ -30,3 +30,12 @@ Some posts specifically about me:
     {% endif %}
   {% endfor %}
 </ul>
+
+My reading goals:
+<ul>
+  {% for post in site.posts %}
+    {% if post.title contains "Reading Goal" %}
+      <li>[{{ post.date | date: "%Y-%m-%d" }}] <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
