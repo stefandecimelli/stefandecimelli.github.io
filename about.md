@@ -5,23 +5,23 @@ permalink: /about/
 ---
 
 I am blogging now, watch out! 
-Time to make every thought I have available on the internet for everyone to see, because they're taking up too much space in the dome.
+Time to make every thought I have available on the internet for everyone to see, because they're taking up too much space in my dome.
+I'm a software developer / programmer for work, and a serial hobbyist when I have the time to be. 
 
-I love making lists, so here's a general list of things I like:
-- Sci-Fi and Fantasy 
-  - especially:
-    - Dune
+I also love making lists, so here's a general list of things I like:
+- Sci-Fi and Fantasy Books 
+  - Especially:
     - Game of Thrones
     - Lord of the Rings
     - Harry Potter
-- History and classics
-- Video games
-- Hockey
-  - I'm a Leafs fan, try not to cry about it!
+    - Dune
+- Watching sports
+  - I'm an Arsenal fan, try not to cry about it!
+  - I'm also a Leafs fan, this one I cry about...
 - Programming
-- Cooking and grilling
+- Video games
 
-And some posts about me:
+Some posts specifically about me:
 <ul>
   {% for post in site.posts %}
     {% if post.url contains "meta" %}
