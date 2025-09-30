@@ -26,8 +26,11 @@ jobs:
         with:
           ruby-version: 3.2.2 # match your .ruby-version
 
+      - name: Configure Bundler
+        run: bundle config set frozen true
+
       - name: Install gems from local cache
-        run: bundle install --local --frozen
+        run: bundle install --local
 
       - name: Setup Pages
         id: pages
